@@ -1,1 +1,1 @@
-# myPortfolio
+# Portfolio for personal website (http://www.thomaswzhang.com)
