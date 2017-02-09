@@ -781,6 +781,27 @@ icon-boxes
     border-bottom: 1px solid #eee;
   }
 }
+
+
+
+/*
+Skills
+*/
+
+.skills-div {
+  padding: .75em;
+}
+
+
+.skills-icons {
+  font-size: 5em;
+  margin: .25em;
+}
+
+
+
+
+
 /*
 Progess bars
 */
