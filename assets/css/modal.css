@@ -1,0 +1,70 @@
+.modal-content {
+  width: 200%;
+  left: -50%;
+}
+
+.portfolio-title{
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 2.5%;
+  font-family: "Dosis", sans-serif;
+  color: #000;
+  font-size: 40px;
+}
+
+.portfolio-img {
+  width: 90%;
+  margin: 0 5% 2.5% 5%;
+  border: 2px solid black;
+}
+
+.portfolio-desc-div {
+  width: 90%;
+  margin: 0 5% 2.5% 5%;
+}
+
+p.portfolio-text {
+  text-align: center;
+  color: #000;
+}
+
+.portfolio-links-div {
+  width: 90%;
+  margin: 2.5% 5% 2.5% 5%;
+  text-align: center; 
+  position:relative; 
+  border-width: 1px 0 0 0;
+}
+
+
+
+/* PORTFOLIO HOVER CSS */
+.portfolio-image-small {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.portfolio-hover {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.cbp-caption-defaultWrap:hover .portfolio-image-small {
+  opacity: 0.3;
+}
+
+.cbp-caption-defaultWrap:hover .portfolio-hover {
+  opacity: 1;
+}
