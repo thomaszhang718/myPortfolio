@@ -36,7 +36,7 @@
                     <div class="col-sm-6">
                         <ul class="list-inline">
                             <!-- <li><a href="#"><i class="ion-ios-telephone"></i> +01 555-5554</a></li> -->
-                            <li><a href="#"><i class="ion-ios-email"></i> thomaszhang718@gmail.com</a></li>
+                            <li><a href="#contact"><i class="ion-ios-email"></i> thomaszhang718@gmail.com</a></li>
                         </ul>
                     </div><!--top left col end-->
                     <div class="col-sm-6 text-right hidden-xs">
@@ -505,7 +505,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 margin-b-30 scrollReveal sr-left">
                         <h4 class="text-uppercase margin-b-30">Say hello to me!</h4>
-                        <form method="post" action="#" class="xone-contact">
+                        <form method="post" action="emailHandler.php" id="contactForm" class="xone-contact">
                             <div class="row">
                                 <div class="col-sm-12">                                 
                                     <div class=" margin-b-20">
@@ -526,7 +526,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <button type="submit" name="submit" class="btn btn-lg btn-skin-border btn-block margin-b-20">Send Message</button>
+                                    <button type="submit" id="submitContact" name="submit" class="btn btn-lg btn-skin-border btn-block margin-b-20">Send Message</button>
                                 </div>
                             </div>
                         </form><!--form end-->
@@ -602,8 +602,42 @@
                     backDelay: 3000, // pause before backspacing
                     loop:true
                     });
+            });
+
+            //Code to scroll on anchor tag and not add to url
+            $(document).ready(function(){
+                $(function() {
+                  $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                      if (target.length) {
+                        $('html, body').animate({
+                          scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                      }
+                    }
+                  });
                 });
+            });
+
+
+
+
+
+
+
+
+
 
         </script>
+
+
+
+
+
+
+
     </body>
 </html>
