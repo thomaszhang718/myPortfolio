@@ -505,18 +505,18 @@
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 margin-b-30 scrollReveal sr-left">
                         <h4 class="text-uppercase margin-b-30">Say hello to me!</h4>
-                        <form method="post" action="emailHandler.php" id="contactForm" class="xone-contact">
+                        <form method="post" action="email.php" id="contactForm" class="xone-contact">
                             <div class="row">
                                 <div class="col-sm-12">                                 
                                     <div class=" margin-b-20">
-                                        <input type="text" name="name" class="form-control" placeholder="Full Name...." />
+                                        <input type="text" id="form_name" name="form_name" class="form-control" placeholder="Full Name...." />
                                     </div>
                                     <div class=" margin-b-20">
-                                        <input type="text" name="email" class="form-control" placeholder="Email Address...." />
+                                        <input type="text" id="form_email" name="form_email" class="form-control" placeholder="Email Address...." />
                                     </div>                          
                                 </div>
                                 <div class="col-sm-12">
-                                    <textarea name="message" class="form-control margin-b-20" rows="5" placeholder="Message...."></textarea>                                  
+                                    <textarea id="form_message" name="form_message" class="form-control margin-b-20" rows="5" placeholder="Message...."></textarea>                                  
                                 </div>
                             </div>
                             <div class="row">
@@ -622,22 +622,29 @@
                 });
             });
 
+            //Contact form data
 
+            $(function() {
+                $("#submitContact").click(function() {
+                    var contactData = {
+                        name: $("#form_name").val(),
+                        email: $("#form_email").val(),
+                        message: $("#form_message").val()
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "email.php",
+                        data: contactData,
+                        success: function(){
+                            //$('.success').fadeIn(1000);
+                            console.log("worked")
+                        }
+                    });
 
-
-
-
-
-
-
-
+                    return false;
+                });
+            });
+            
         </script>
-
-
-
-
-
-
-
     </body>
 </html>
