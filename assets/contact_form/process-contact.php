@@ -17,7 +17,7 @@ if (isset($_POST['action'])) { // Checking for submit form
 				
 				mail($my_email, $subject, $message, $headers);
 				
-				echo 'success|<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ion-close"></i></button>Thank you! We will contact you shortly.</div>';
+				echo 'success|<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ion-close"></i></button>Thank you! I will contact you shortly.</div>';
 			} else {
 				echo 'error|<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert"><i class="ion-close"></i></button>Please enter a valid email address.</div>';
 			}
