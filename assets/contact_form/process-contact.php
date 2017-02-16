@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['action'])) { // Checking for submit form
 	
-	$my_email = 'support@example.com'; // Change with your email address
+	$my_email = 'thomaszhang718@gmail.com'; // Change with your email address
 	
 	if ($_POST['action'] == 'add') {
 		$name		= trim(strip_tags(addslashes($_POST['name'])));
